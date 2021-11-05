@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteRule "trang-chu.html" "index.php"
+RewriteRule "^danh-muc/([0-9]+)/([a-zA-Z0-9-]+)$" "?c=listprd&idcat=$1&ten_dm=$2"
+RewriteRule "^laptop-theo-hang/([a-zA-Z0-9-]+)$" "?c=listprd&brand=$1"
+RewriteRule "thong-tin-tai-khoan.html" "?c=info"
+
+RewriteRule "admin/danh-sach-san-pham.html" "admin/?c=listprd"
+RewriteRule "admin/danh-muc.html" "admin/?c=listcat"
+RewriteRule "admin/don-hang.html" "admin/?c=orders"
+RewriteRule "^admin/don-hang/([0-9]+).html$" "admin/?c=orderdetail&id=$1"
